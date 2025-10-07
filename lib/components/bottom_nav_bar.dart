@@ -18,10 +18,10 @@ class MyBottomBar extends StatelessWidget {
           tabBackgroundColor: Colors.black12,
           activeColor: Colors.white,
           color: Colors.grey.shade300,
-          tabActiveBorder: Border.all(color: Colors.white),
+          // tabActiveBorder: Border.all(color: Colors.white),
           tabs: [
-        GButton(icon: Icons.home,text: 'Shop',),
-        GButton(icon: Icons.shopping_cart,text: 'Cart',)
+        GButton(icon: Icons.home,text: 'Shop',iconColor: Colors.brown,),
+        GButton(icon: Icons.shopping_cart,text: 'Cart',iconColor: Colors.brown,)
       ]),
     );
   }

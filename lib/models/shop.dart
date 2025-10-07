@@ -8,8 +8,21 @@ class BubbleTeaShop extends ChangeNotifier{
   final List<Drink> _shop=[
     Drink(
         name: 'Milk Tea',
-        price: '32',
-        imagePath: 'lib/images/milktea.png')
+        price: '300 PKR',
+        imagePath: 'lib/images/milktea.jpg'),
+    Drink(
+        name: 'Cappuccino',
+        price: '500 PKR',
+        imagePath: 'lib/images/cap.png'),
+    Drink(
+        name: 'Latte',
+        price: '400 PKR',
+        imagePath: 'lib/images/latte.png'),
+    Drink(
+        name: 'Horchata',
+        price: '400 PKR',
+        imagePath: 'lib/images/horchata.jpg'),
+
   ];
 
   //list of drink in cart

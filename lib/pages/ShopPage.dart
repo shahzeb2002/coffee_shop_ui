@@ -26,13 +26,18 @@ class _ShopPageState extends State<ShopPage> {
     return Consumer<BubbleTeaShop>(builder: (context, value, child) =>
         Scaffold(
         backgroundColor: Colors.brown.shade200 ,
+        appBar: AppBar(
+          title:Text("COFFEE SHOP",style: TextStyle(fontSize: 20),) ,
+
+        ),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(25.0),
             child: Column(
               children: [
                 //heading
-                Text("Coffe Shop",style: TextStyle(fontSize: 20),),
+
+                SizedBox(height: 10,),
 
                 //list of drinks
                 Expanded(child: ListView.builder(
@@ -42,6 +47,7 @@ class _ShopPageState extends State<ShopPage> {
                       Drink individualDrink=value.shop[index];
                       //return list
                       return DrinkTile(drink: individualDrink,
+                          trailing: Icon(Icons.arrow_forward),
                         onTap: () => goToOrderPage(individualDrink),
                       );
                     }

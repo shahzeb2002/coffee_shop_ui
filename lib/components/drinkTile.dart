@@ -5,13 +5,15 @@ import 'package:flutter/material.dart';
 class DrinkTile extends StatelessWidget {
   void Function()? onTap;
   final Drink drink;
-  DrinkTile({super.key,required this.drink,required this.onTap});
+  final Widget trailing;
+  DrinkTile({super.key,required this.drink,required this.onTap,required this.trailing});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap:onTap ,
       child: Container(
+        margin: EdgeInsets.only(bottom: 10),
         decoration: BoxDecoration(
           color: Colors.brown.shade100,
           borderRadius: BorderRadius.circular(12)
@@ -19,8 +21,13 @@ class DrinkTile extends StatelessWidget {
         child: ListTile(
           title: Text(drink.name),
           subtitle: Text(drink.price),
-          leading: Image.asset(drink.imagePath),
-          trailing: Icon(Icons.arrow_forward),
+          leading: ClipRRect(
+            borderRadius: BorderRadius.circular(5),
+              child: SizedBox(
+                width: 50,
+                  height:80,
+                  child: Image.asset(drink.imagePath,fit: BoxFit.cover,))),
+          trailing: trailing,
       
         ),
       ),

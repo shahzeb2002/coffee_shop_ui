@@ -17,7 +17,15 @@ class MyApp extends StatelessWidget {
     builder: (context, child) => MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      theme: ThemeData(primarySwatch: Colors.brown,useMaterial3: false),
+      theme: ThemeData(
+        appBarTheme: AppBarThemeData(
+          titleTextStyle: TextStyle(wordSpacing: 4,letterSpacing: 5),
+          backgroundColor: Colors.brown.shade600,
+          elevation: 0,
+          centerTitle: true,
+        ),
+          primarySwatch: Colors.brown,useMaterial3: false,
+      ),
       home: const Homepage(),
     ),
     );
