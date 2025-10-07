@@ -23,7 +23,7 @@ class _ShopPageState extends State<ShopPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<BubbleTeaShop>(builder: (context, value, child) =>
+    return Consumer<CoffeeShop>(builder: (context, value, child) =>
         Scaffold(
         backgroundColor: Colors.brown.shade200 ,
         appBar: AppBar(

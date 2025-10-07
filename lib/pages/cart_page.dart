@@ -15,13 +15,13 @@ class CartPage extends StatefulWidget {
 class _CartPageState extends State<CartPage> {
 
   void removeFromCart(Drink drink){
-    Provider.of<BubbleTeaShop>(context,listen: false).removeFromCart(drink);
+    Provider.of<CoffeeShop>(context,listen: false).removeFromCart(drink);
   }
 
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<BubbleTeaShop>(builder: (context, value, child) => Scaffold(
+    return Consumer<CoffeeShop>(builder: (context, value, child) => Scaffold(
         backgroundColor: Colors.brown.shade200,
         appBar: AppBar(
           title: Text('CART',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),

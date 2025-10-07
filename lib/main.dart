@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(create: (context) => BubbleTeaShop(),
+    return ChangeNotifierProvider(create: (context) => CoffeeShop(),
     builder: (context, child) => MaterialApp(
       debugShowCheckedModeBanner: false,
 

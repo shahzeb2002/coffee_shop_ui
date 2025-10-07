@@ -38,7 +38,7 @@ class _OrderpageState extends State<Orderpage> {
 
   //add to cart
   void addToCart(){
-    Provider.of<BubbleTeaShop>(context,listen: false).addToCart(widget.drink);
+    Provider.of<CoffeeShop>(context,listen: false).addToCart(widget.drink);
     Navigator.pop(context);
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(

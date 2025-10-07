@@ -2,7 +2,7 @@
 import 'package:coffee/models/drink.dart';
 import 'package:flutter/cupertino.dart';
 
-class BubbleTeaShop extends ChangeNotifier{
+class CoffeeShop extends ChangeNotifier{
   //list of drink for sales
 
   final List<Drink> _shop=[
