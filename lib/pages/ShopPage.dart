@@ -27,7 +27,14 @@ class _ShopPageState extends State<ShopPage> {
         Scaffold(
         backgroundColor: Colors.brown.shade200 ,
         appBar: AppBar(
-          title:Text("COFFEE SHOP",style: TextStyle(fontSize: 20),) ,
+          title:Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.local_cafe_rounded,color: Colors.white,),
+              SizedBox(width: 8,),
+              Text("COFFEE SHOP",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+            ],
+          ),
 
         ),
         body: SafeArea(
@@ -35,19 +42,31 @@ class _ShopPageState extends State<ShopPage> {
             padding: const EdgeInsets.all(25.0),
             child: Column(
               children: [
-                //heading
-
                 SizedBox(height: 10,),
+                Text(
+                  "Today's Specials ☕",
+                  style: TextStyle(
+                    color: Colors.brown.shade900,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+
+                SizedBox(height: 15,),
 
                 //list of drinks
                 Expanded(child: ListView.builder(
+                    physics: const BouncingScrollPhysics(),
                   itemCount: value.shop.length,
                     itemBuilder: (context, index) {
                     //get individuak
                       Drink individualDrink=value.shop[index];
                       //return list
                       return DrinkTile(drink: individualDrink,
-                          trailing: Icon(Icons.arrow_forward),
+                          trailing: Icon(Icons.arrow_forward,
+                            color: Colors.brown.shade400,
+                            size: 20,),
                         onTap: () => goToOrderPage(individualDrink),
                       );
                     }

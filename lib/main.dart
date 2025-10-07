@@ -18,13 +18,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       theme: ThemeData(
+
         appBarTheme: AppBarThemeData(
-          titleTextStyle: TextStyle(wordSpacing: 4,letterSpacing: 5),
+          titleTextStyle: TextStyle(wordSpacing: 4,letterSpacing: 1.2),
           backgroundColor: Colors.brown.shade600,
           elevation: 0,
           centerTitle: true,
         ),
           primarySwatch: Colors.brown,useMaterial3: false,
+        iconTheme: IconThemeData(color: Colors.brown)
       ),
       home: const Homepage(),
     ),
