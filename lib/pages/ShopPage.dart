@@ -2,6 +2,7 @@ import 'package:coffee/components/drinkTile.dart';
 import 'package:coffee/models/drink.dart';
 import 'package:coffee/models/shop.dart';
 import 'package:coffee/pages/OrderPage.dart';
+import 'package:coffee/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -26,7 +27,10 @@ class _ShopPageState extends State<ShopPage> {
     return Consumer<CoffeeShop>(builder: (context, value, child) =>
         Scaffold(
         backgroundColor: Colors.brown.shade200 ,
+       
+
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title:Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -34,7 +38,13 @@ class _ShopPageState extends State<ShopPage> {
               SizedBox(width: 8,),
               Text("COFFEE SHOP",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
             ],
+            
           ),
+          leading: InkWell(
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage(),)),
+
+              child: Icon(Icons.logout_outlined)),
+          
 
         ),
         body: SafeArea(

@@ -1,5 +1,6 @@
 import 'package:coffee/models/shop.dart';
 import 'package:coffee/pages/HomePage.dart';
+import 'package:coffee/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.brown,useMaterial3: false,
         iconTheme: IconThemeData(color: Colors.brown)
       ),
-      home: const Homepage(),
+      home: const SplashScreen(),
     ),
     );
   }
